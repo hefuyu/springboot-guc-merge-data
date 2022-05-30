@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.249.40:3306/dc1?userUnicode=true&characterEncoding=UTF-8&rewriteBatchedStatements=true&allowMultiQueries=true
+    username: root
+    password: Aa123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+server:
+  port: 8085
+  tomcat:
+    accept-count: 500
+    threads:
+      max: 2000
+      min-spare: 100
+    max-connections: 10000
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*.xml
+  mapperScanner:
+    basePackage: com.hefy.gucboot, com.hefy.gucboot.mapper
